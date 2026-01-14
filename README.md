@@ -416,3 +416,21 @@ several Flask-Migrate commands to create the initial version of our database:
 - [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/)
 - [SQLite Viewer VSCode Extension](https://marketplace.visualstudio.com/items?itemName=qwtel.sqlite-viewer)
 - [Metadata - SQLAlchemy 2.0 Documentation](https://docs.sqlalchemy.org/en/20/core/metadata.html)
+
+## Running Tests
+
+- A lightweight test runner is included to execute simple assert-style tests
+  without requiring `pytest` or its plugins. Use this when your environment
+  has incompatible pytest plugins or versions.
+
+  Run the test runner from the repository root:
+
+  ```bash
+  python3 run_tests.py
+  ```
+
+- The runner executes any `test_*.py` or `*_test.py` files under
+  `server/testing` and reports a brief summary.
+
+  If you prefer `pytest`, resolve environment plugin/version issues (for
+  example by pinning `pytest` and `pytest-asyncio` to compatible versions).
